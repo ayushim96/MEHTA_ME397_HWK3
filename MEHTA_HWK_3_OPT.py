@@ -85,9 +85,6 @@ model.SOC_const = Constraint(model.t, rule = SOC_const)
 # create instance of the model (abstract only)
 model = model.create_instance(data)
 
-# look at model attributes
-# model.t.pprint()
-
 # solve the model
 opt = SolverFactory('glpk')
 status = opt.solve(model) 
